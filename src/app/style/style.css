@@ -1,0 +1,31 @@
+.sidebar{
+    width: 172px;
+    height: calc(100vh - 48px);
+    background: rgb(255, 255, 255);
+}
+.main_file{
+    background-color: #202634;
+    width: 100%;
+}
+.menu__list_mapping>.MuiMenu-paper{
+    background:#535B6C !important;
+}
+.main__header{
+    border:none;
+}
+.main__header .MuiTabs-indicator{
+    background: none;
+}
+.main__tab{
+    background-color: #A9ACB2;
+    height: 80vh;
+}
+.main__header .Mui-selected {
+    color: white !important; /* Thay đổi màu chữ mong muốn */
+  }
+
+  @media screen and (max-width: 768px ){
+    .sidebar{
+        display: none;
+    }
+  }

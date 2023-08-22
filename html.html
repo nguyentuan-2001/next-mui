@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const numbers = [37, -17, 7, 0];
+      // console.log(Math.min(numbers)); // output là NaN do hàm này không nhận array là tham số
+
+      // //Sử dụng spread operator
+      // console.log(Math.min(...numbers)); // output: -17
+      // console.log(Math.max(...numbers)); // 37
+
+      // const cars = [
+      //   {
+      //     type: "Fiat",
+      //     model: "500",
+      //     color: "white",
+      //   },
+      //   {
+      //     type: "Fiat1",
+      //     model: "5001",
+      //     color: "white1",
+      //   },
+      // ];
+
+      // const arr = [];
+
+      // cars.forEach((car) => {
+      //   console.log(car.type);
+      //   arr.push(car.type);
+      // });
+      // console.log(arr);
+
+      function* generateFibonaci() {
+        let prev = 0;
+        let curr = 1;
+        while (true) {
+          yield curr;
+          // Calculate the next number
+          const next = prev + curr;
+          prev = curr;
+          curr = next;
+        }
+      }
+      const fibo = generateFibonaci();
+
+      const array = [];
+      for (let i = 0; i < 20; i++) {
+        array.push(fibo.next());
+      }
+      console.log(array);
+      // array.forEach(ar =>{
+      //   console.log(ar.value);
+      // })
+
+      for (const char of array) {
+        console.log(char.value);
+      }
+    </script>
+  </body>
+</html>
